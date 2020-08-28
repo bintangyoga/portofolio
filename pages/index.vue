@@ -37,7 +37,7 @@
 
         <div class="col-md-12 text-center px-5 mt-5">
             <img src="~/assets/images/image.jpg" class="profile img-fluid rounded-circle mt-5" alt="Responsive image" />
-            <h5 class="mt-3">Bintang Yoga Pamungkas</h5>
+            <h1 class="mt-3">Bintang Yoga Pamungkas</h1>
             <p>UI/UX Designer</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus beatae expedita obcaecati optio nihil ratione consectetur ipsam impedit iure asperiores. Labore esse corporis quas aliquid voluptatibus porro quo nam impedit.</p>
             <div class="d-flex flex-column align-items-center">
@@ -49,7 +49,7 @@
           <NuxtLink to="/about">
             <div class="image-box">
               <div id="overlay"></div>
-              <img src="~/assets/images/image.jpg">
+              <img src="~/assets/images/portofolio1.jpg">
             </div>
           </NuxtLink>
         </div>
@@ -57,7 +57,7 @@
           <NuxtLink to="/about">
             <div class="image-box">
               <div id="overlay"></div>
-              <img src="~/assets/images/image.jpg">
+              <img src="~/assets/images/portofolio2.jpg">
             </div>
           </NuxtLink>
         </div>
@@ -65,9 +65,22 @@
           <NuxtLink to="/about">
             <div class="image-box">
               <div id="overlay"></div>
-              <img src="~/assets/images/image.jpg">
+              <img src="~/assets/images/portofolio3.jpg">
             </div>
           </NuxtLink>
+        </div>
+        <div class="col-md-12 mt-5">
+          <div class="heading text-center mt-5">
+            <h3>Tools & Skills</h3>
+          </div>
+          <div class="tools">
+            <div class="tool-list"></div>
+            <div class="tool-list"></div>
+            <div class="tool-list"></div>
+            <div class="tool-list"></div>
+            <div class="tool-list"></div>
+            <div class="tool-list"></div>
+          </div>
         </div>
       </div>
       <div class="row mt-5 d-flex flex-column align-items-center">
@@ -84,6 +97,55 @@
 </template>
 
 <style lang="scss" scoped>
+  $breakpoints: (
+  'small':  ( min-width:  700px ),
+  'medium': ( min-width:  992px ),
+  'large':  ( min-width: 1200px )
+) !default;
+
+/// Mixin to manage responsive breakpoints
+/// @author Hugo Giraudel
+/// @param {String} $breakpoint - Breakpoint name
+/// @require $breakpoints
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  }
+ 
+  // If the key doesn't exist in the map
+  @else {
+    @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+        + "Available breakpoints are: #{map-keys($breakpoints)}.";
+  }
+}
+
+
+
+
+
+  .tools{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+
+    .tool-list{
+      background: red;
+      width: 100px;
+      height: 100px;
+      margin: 20px;
+      border-radius: 36px;
+      
+      @include respond-to('small') {
+      background: red;
+  }
+    }
+  }
+
   .logo{
     position: absolute;
     top: 40px;
@@ -97,10 +159,11 @@
   }
 
   .ribbon {
+    z-index: 1;
     width: 42px;
     height: 42px;
     position: absolute;
-    border-radius: 100%;
+    border-radius: 50%;
     transition: all 0.2s;
     cursor: pointer;
     
@@ -142,7 +205,7 @@
       .teks{
         position: absolute !important;
         top: 10px !important;
-        left: 50px !important;
+        left: 48px !important;
       }
     }
   }
@@ -172,8 +235,9 @@
 
 
   .bottom-contact{
-    background-color: #f3f3f3;
+    background-color: #fff;
     border-radius: 10px 10px 0 0;
+    box-shadow: 0px 0px 30px 10px rgba(74, 23, 141, 0.062);
   }
   .profile{
     width: 200px;

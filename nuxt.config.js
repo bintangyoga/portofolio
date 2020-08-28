@@ -26,6 +26,7 @@ export default {
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.3/css/bootstrap.min.css' },
         { rel: 'stylesheet', type: 'text/css', href: 'href="https://fonts.googleapis.com/css2?family=Poppins&display=swap' },
+        { rel: 'stylesheet', type: 'text/css', href: 'https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap' },
         { rel: 'stylesheet', type: 'text/css', href: 'https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.css' }
       ]
     },
