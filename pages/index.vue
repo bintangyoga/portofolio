@@ -2,7 +2,7 @@
   <main>
     <div class="container mt-5">
       <div class="row mb-5">
-      <img class="logo" src="~/assets/images/image.jpg">
+      <img class="logo" src="~/assets/images/profile.jpg">
       <div class="darkmode">
         <div class="custom-control custom-switch">
           <input type="checkbox" class="custom-control-input" id="darkSwitch">
@@ -36,7 +36,7 @@
       </a>
 
         <div class="col-md-12 text-center px-5 mt-5">
-            <img src="~/assets/images/image.jpg" class="profile img-fluid rounded-circle mt-5" alt="Responsive image" />
+            <img src="~/assets/images/profile.jpg" class="profile img-fluid rounded-circle mt-5" alt="Responsive image" />
             <h1 class="mt-3">Bintang Yoga Pamungkas</h1>
             <p>UI/UX Designer</p>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus beatae expedita obcaecati optio nihil ratione consectetur ipsam impedit iure asperiores. Labore esse corporis quas aliquid voluptatibus porro quo nam impedit.</p>
@@ -71,23 +71,23 @@
         </div>
         <div class="col-md-12 mt-5">
           <div class="heading text-center mt-5">
-            <h3>Tools & Skills</h3>
+            <h3>Tools &amp; Skills</h3>
           </div>
           <div class="tools">
-            <div class="tool-list"></div>
-            <div class="tool-list"></div>
-            <div class="tool-list"></div>
-            <div class="tool-list"></div>
-            <div class="tool-list"></div>
-            <div class="tool-list"></div>
+              <img class="tool__item" src="~/assets/images/figma.png" alt="">
+              <img class="tool__item" src="~/assets/images/svg/illustrator.svg" alt="">
+              <img class="tool__item" src="~/assets/images/svg/photoshop.svg" alt="">
+              <img class="tool__item" src="~/assets/images/svg/xd.svg" alt="">
+              <img class="tool__item" src="~/assets/images/svg/nuxt.svg" alt="">
+              <img class="tool__item" src="~/assets/images/svg/sass.svg" alt="">
           </div>
         </div>
       </div>
       <div class="row mt-5 d-flex flex-column align-items-center">
         <div class="col-md-8 d-flex flex-row justify-content-between mt-4 pt-1 bottom-contact">
           <div class="bottom-contact__left d-flex m-3">
-            <img class=" logo" src="~/assets/images/image.jpg">
-            <p class="ml-3">Lorem ipsum dolor sit amet consectetur</p>
+            <img class=" logo" src="~/assets/images/profile.jpg">
+            <p class="ml-3">Lorem ipsum dolor sit amet</p>
           </div>
           <a href="#" class="btn btn-success m-3">WhatsApp Now</a>
         </div>
@@ -130,19 +130,18 @@
   .tools{
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     width: 100%;
     height: auto;
 
-    .tool-list{
-      background: red;
-      width: 100px;
-      height: 100px;
+    .tool__item{
+      width: 80;
+      height: 80px;
       margin: 20px;
-      border-radius: 36px;
       
-      @include respond-to('small') {
-      background: red;
-  }
+      // @include respond-to('small') {
+      //   background: red;
+      // }
     }
   }
 
