@@ -85,22 +85,23 @@
       </div>
       <div class="row mt-5 d-flex flex-column align-items-center">
         <div class="col-md-8 d-flex flex-row justify-content-between mt-4 pt-1 bottom-contact">
-          <div class="bottom-contact__left d-flex m-3">
-            <img class=" logo" src="~/assets/images/profile.jpg">
-            <p class="ml-3">Lorem ipsum dolor sit amet</p>
+          <div class="bottom-contact__left m-3 d-flex align-items-center">
+            <img class="contact-logo" src="~/assets/images/profile.jpg">
+            <p class="contact-text ml-3">For business inquiry please text me on WhatsApp</p>
           </div>
-          <a href="#" class="btn btn-success m-3">WhatsApp Now</a>
+          <a href="http://wa.me/089673768713" target="_blank" class="btn btn-success m-3">WhatsApp Now</a>
         </div>
       </div>
+      
     </div>
   </main>
 </template>
 
 <style lang="scss" scoped>
   $breakpoints: (
-  'small':  ( min-width:  700px ),
-  'medium': ( min-width:  992px ),
-  'large':  ( min-width: 1200px )
+  'small':  ( max-width:  700px ),
+  'medium': ( max-width:  992px ),
+  'large':  ( max-width: 1200px )
 ) !default;
 
 /// Mixin to manage responsive breakpoints
@@ -149,6 +150,15 @@
     position: absolute;
     top: 40px;
     left: 40px;
+  }
+
+  .contact-logo{
+    width: 40px;
+    height: 40px;
+  }
+
+  .contact-text{
+    margin: 0;
   }
 
   .darkmode{
@@ -237,6 +247,27 @@
     background-color: #fff;
     border-radius: 10px 10px 0 0;
     box-shadow: 0px 0px 30px 10px rgba(74, 23, 141, 0.062);
+    
+      @include respond-to('small') {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center !important;
+        align-items: center !important;
+        align-content: center !important;
+        .bottom-contact__left{
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+          align-content: center;
+          .contact-text{
+            margin: 20px 0 0 0 !important;
+          }
+        }
+      }
   }
   .profile{
     width: 200px;
